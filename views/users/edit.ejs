@@ -1,0 +1,38 @@
+<% extend('../layout') %>
+<h1><%=title%></h1>
+<hr>
+<form method="POST">
+  <% if(data){ %>
+      <label>ID:</label><br>
+      <input type="text" name="id" value=<%=data.id%> >
+      <br>
+      <label>FirstName:</label><br>
+      <input type="text" name="firstname" value=<%=data.firstname%> >
+      <br>
+      <label>LastName:</label><br>
+      <input type="text" name="lastname" value=<%=data.lastname%> >
+      <br>
+      <label>Phone:</label><br>
+      <input type="text" name="phone" value=<%=data.phone%> >
+      <br>
+      <label>Email:</label><br>
+      <input type="text" name="email" value=<%=data.email%> >
+  <% }else{ %>
+      <label>ID:</label><br>
+      <input type="text" name="id">
+      <br>
+      <label>FirstName:</label><br>
+      <input type="text" name="firstname">
+      <br>
+      <label>LastName:</label><br>
+      <input type="text" name="lastname">
+      <br>
+      <label>Phone:</label><br>
+      <input type="text" name="phone">
+      <br>
+      <label>Email:</label><br>
+      <input type="text" name="email">
+  <% } %>
+  <br><br>
+  <input type="submit" value="Update">
+</form>
